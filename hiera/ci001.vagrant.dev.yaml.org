@@ -1,0 +1,17 @@
+---
+classes: jenkins_server
+nginx::configtest_enable: true
+nginx::service_ensure: running
+nginx::service_restart: '/sbin/service nginx restart'
+nginx::nginx_upstreams:
+  'jenkins':
+    ensure: present
+    members:
+      - localhost:8080
+nginx::nginx_vhosts:
+  '_':
+    proxy: 'http://jenkins'
+jenkins::plugin_hash:
+  'git':
+    version: 'latest'
+jenkins::configure_firewall: false

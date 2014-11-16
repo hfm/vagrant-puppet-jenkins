@@ -1,0 +1,19 @@
+---
+classes: jenkins_server
+jenkins::plugin_hash:
+  # git
+  'git': {}
+  'git-client': {}
+  'scm-api': {}
+  # github
+  'github': {}
+  'github-api': {}
+  'ssh-agent': {}
+  # misc
+  'disk-usage': {}
+  'jobConfigHistory': {}
+  'locale': {}
+  'log-parser': {}
+  'custom-job-icon': {}
+  'buildtriggerbadge': {}
+  'timestamper': {}
